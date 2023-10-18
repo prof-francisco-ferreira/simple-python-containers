@@ -1,0 +1,14 @@
+# previous image
+FROM python:3.9-slim
+
+ADD . /app
+WORKDIR /app
+
+#RUN apt update
+#RUN apt -y upgrade
+#RUN apt -y install python3 python3-pip
+RUN pip3 install -r requirements.txt
+
+# EXPOSE 5001
+
+CMD python3 app.py
